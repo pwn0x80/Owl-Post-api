@@ -10,11 +10,11 @@ app.set("view engine", "ejs");
 connectDB = require("./config/db");
 connectDB();
 
-const corsOptions = {
-  origin: process.env.ALLOW_CLIENTS.split(","),
-};
+//const corsOptions = {
+//  origin: process.env.ALLOW_CLIENTS.split(","),
+//};
 // middleware
-app.use(cors(corsOptions));
+//app.use(cors(corsOptions));
 
 //routes
 app.use("/api/mail", require("./routes/files"));
