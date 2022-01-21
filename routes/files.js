@@ -28,7 +28,7 @@ router.post("/", (req, res) => {
 
     const response = await file.save();
     return res.json({
-      file: `${process.env.APP_BASE_URL}mail/${response.uuid}`,
+      file: `${process.env.APP_BASE_URL}/mail/${response.uuid}`,
     });
   });
 });
