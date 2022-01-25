@@ -6,6 +6,8 @@ const app = express();
 const { nanoid } = require("nanoid");
 app.use(express.static("public"));
 const cors = require("cors");
+app.use(cors())
+
 app.set("view engine", "ejs");
 connectDB = require("./config/db");
 connectDB();
