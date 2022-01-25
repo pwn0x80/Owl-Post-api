@@ -6,13 +6,12 @@ const app = express();
 const { nanoid } = require("nanoid");
 app.use(express.static("public"));
 const cors = require("cors");
-
 app.set("view engine", "ejs");
 connectDB = require("./config/db");
 connectDB();
 
 const corsOptions = {
-  origin:'http://localhost:3000'
+  origin: process.env.ALLOW_CLIENTS.split(","),
 };
 // middleware
 app.use(cors(corsOptions));
